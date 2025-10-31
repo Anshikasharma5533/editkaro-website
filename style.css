@@ -1,0 +1,229 @@
+/* ---------- GLOBAL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e0f7fa, #fff);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ---------- NAVBAR ---------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #004d40;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav .logo {
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #26a69a;
+}
+
+/* ---------- HEADER / HERO ---------- */
+header .hero-text {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: white;
+  background: linear-gradient(90deg, #00796b, #26a69a);
+  animation: fadeInDown 1s ease;
+}
+
+/* ---------- SEARCH ---------- */
+.search-section {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+#searchBox {
+  width: 60%;
+  padding: 0.8rem;
+  border: 2px solid #26a69a;
+  border-radius: 25px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+#searchBox:focus {
+  border-color: #004d40;
+  box-shadow: 0 0 10px #26a69a;
+}
+
+/* ---------- INTERNSHIP CARDS ---------- */
+.internship-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.internship-card {
+  background: white;
+  width: 300px;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  animation: fadeInUp 1s ease;
+}
+
+.internship-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(0, 150, 136, 0.4);
+}
+
+.apply-btn {
+  background: linear-gradient(90deg, #00796b, #26a69a);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.apply-btn:hover {
+  background: linear-gradient(90deg, #004d40, #009688);
+  transform: scale(1.05);
+}
+
+/* ---------- CONTENT SECTIONS ---------- */
+.content-section {
+  max-width: 900px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 1rem;
+  animation: fadeInUp 1s ease;
+}
+
+.content-section h1 {
+  color: #004d40;
+  margin-bottom: 1rem;
+}
+
+/* ---------- PORTFOLIO GRID ---------- */
+.portfolio-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: white;
+  width: 250px;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 150, 136, 0.3);
+}
+
+/* ---------- CONTACT FORM ---------- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1.5px solid #26a69a;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #004d40;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  margin-top: auto;
+  background: #004d40;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background: #004d40;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  #searchBox {
+    width: 85%;
+  }
+
+  .project-card,
+  .internship-card {
+    width: 90%;
+  }
+}
